@@ -1,0 +1,24 @@
+{
+  "name": "contribution-protocol",
+  "version": "1.0.0",
+  "description": "A practical guide to standard open-source contribution workflows",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "open-source",
+    "contribution",
+    "guide",
+    "workflow"
+  ],
+  "author": "柯慕灵",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "vitepress-plugin-image-viewer": "^1.1.6"
+  }
+}
