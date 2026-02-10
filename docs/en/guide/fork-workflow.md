@@ -177,7 +177,7 @@ If this is the first push for a new branch, the button will show Publish branch.
 
 After pushing, open GitHub and you will see a prompt banner. Click **Compare & pull request**.
 
-<!-- TODO: Insert screenshot -->
+![alt text](/img/compare-pull-request.png)
 
 Fill in the PR details (see [Pull Request Standards](./pull-request)), then click **Create pull request**.
 

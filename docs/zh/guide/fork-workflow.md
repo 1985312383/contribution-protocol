@@ -177,7 +177,7 @@ git push origin feat/add-search-feature
 
 Push 完成后，打开 GitHub，你会看到一个提示横幅，点击 **Compare & pull request**。
 
-<!-- TODO: 插入截图 - Compare & pull request 横幅 -->
+![alt text](/img/compare-pull-request.png)
 
 填写 PR 信息（详见 [Pull Request 规范](./pull-request)），然后点击 **Create pull request**。
 

@@ -19,7 +19,7 @@ This section walks you through the key areas using real GitHub projects as examp
 
 A typical GitHub repository homepage contains these areas:
 
-<!-- TODO: Insert screenshot - GitHub repository homepage -->
+![alt text](/img/project-structure.png)
 
 | Area | Description |
 |------|-------------|
