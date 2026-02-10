@@ -2,6 +2,30 @@
 
 Fork 了一个文档类项目后，你可能想在自己的 Fork 上预览修改后的网站效果。本节介绍如何在 Fork 仓库上部署和预览文档站点。
 
+## 为什么要在 Fork 仓库预览
+
+很多新手修改了文档后，直接提交 PR 到主仓库，让维护者去看效果。这是不对的。
+
+正确的做法是：
+
+1. **先在自己的 Fork 仓库部署预览**，确认页面渲染正确、排版无误
+2. **确认没问题后再提交 PR**，并在 PR 描述中附上你的预览链接
+
+::: danger 反面模式
+修改文档后直接提交 PR，不检查构建效果。维护者打开一看：格式错乱、图片丢失、链接 404。这种 PR 只会被打回，浪费双方时间。
+:::
+
+## 完整的文档贡献流程
+
+```
+1. Fork 仓库 → Clone 到本地
+2. 创建分支，修改文档内容
+3. 本地预览，确认效果 ✓
+4. Push 到自己的 Fork 仓库
+5. 在 Fork 仓库开启 GitHub Pages，在线预览 ✓
+6. 确认无误后，创建 PR，附上预览链接
+```
+
 ## GitHub Pages 部署
 
 大多数文档项目使用 GitHub Pages 部署。Fork 后，你需要手动开启。
@@ -68,8 +92,47 @@ mkdocs serve
 https://你的用户名.github.io/项目名/
 ```
 
+例如，原项目是 `https://original-org.github.io/my-docs/`，你 Fork 后的预览地址就是：
+
+```
+https://your-username.github.io/my-docs/
+```
+
 ::: tip 提示
-本地预览确认无误后再提交 PR，可以大幅减少 Review 来回修改的次数。
+如果你修改的是某个具体页面，可以直接拼出该页面的完整 URL。例如你修改了 `docs/guide/setup.md`，预览地址就是：
+```
+https://your-username.github.io/my-docs/guide/setup.html
+```
+:::
+
+## 在 PR 中附上预览链接
+
+确认 Fork 仓库的预览效果没问题后，创建 PR 时应该在描述中附上预览链接，方便维护者直接查看渲染效果。
+
+### 推荐写法
+
+在 PR 描述中添加一个 **Preview** 部分：
+
+```markdown
+## 修改内容
+
+更新了安装指南，补充了 Windows 环境的配置步骤。
+
+## 预览链接
+
+- 修改页面预览：https://your-username.github.io/project-name/guide/setup.html
+
+Closes #42
+```
+
+### 为什么要附预览链接
+
+- **维护者不需要本地构建**就能看到你的修改效果
+- **加速 Review 流程**：一眼就能看出排版是否正确
+- **体现专业态度**：说明你已经验证过修改效果
+
+::: warning 注意
+确保你的 Fork 仓库 GitHub Pages 已经构建完成再提交 PR。如果 Pages 还在构建中，维护者点开链接会看到 404。
 :::
 
 ## 下一步

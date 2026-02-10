@@ -48,6 +48,10 @@ GitHub 会在 PR 合并后自动关闭关联的 Issue。
 
 说明你是否进行了测试，以及测试结果。
 
+### 5. 预览链接（文档类 PR）
+
+如果你的 PR 涉及文档修改，应该在 Fork 仓库部署预览后，附上对应页面的预览链接。详见 [Fork 站点预览](./fork-preview)。
+
 ## PR 描述模板
 
 ```markdown
@@ -60,6 +64,10 @@ GitHub 会在 PR 合并后自动关闭关联的 Issue。
 为什么需要这个修改？关联的 Issue 是什么？
 
 Closes #issue_number
+
+## 预览链接（文档类 PR 填写）
+
+- 修改页面预览：https://your-username.github.io/project-name/path/to/page.html
 
 ## 测试
 

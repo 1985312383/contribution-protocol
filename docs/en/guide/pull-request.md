@@ -48,6 +48,10 @@ GitHub will automatically close the linked Issues when the PR is merged.
 
 Describe whether you tested the changes and what the results were.
 
+### 5. Preview Link (Documentation PRs)
+
+If your PR involves documentation changes, you should deploy a preview on your fork and include the preview link for the relevant pages. See [Fork Site Preview](./fork-preview) for details.
+
 ## PR Description Template
 
 ```markdown
@@ -60,6 +64,10 @@ Briefly describe what this PR does.
 Why is this change needed? What Issue is it related to?
 
 Closes #issue_number
+
+## Preview (for documentation PRs)
+
+- Modified page preview: https://your-username.github.io/project-name/path/to/page.html
 
 ## Testing
 
