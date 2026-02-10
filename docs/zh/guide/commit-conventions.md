@@ -85,6 +85,43 @@ feat: add search, fix login bug, update readme, refactor utils
 2. **面向未来的读者**：想象半年后有人在 `git log` 里看到这条记录，他能理解吗？
 3. **保持一致性**：整个项目应该使用统一的 commit 风格
 
+## 借助 AI 辅助撰写
+
+手动写 commit message 对新手来说可能有些困难。好消息是，主流工具已经内置了 AI 辅助功能，可以根据你的代码改动自动生成符合规范的 commit message。
+
+### VSCode（GitHub Copilot）
+
+VSCode 的源代码管理面板（Source Control）集成了 Copilot：
+
+1. 在左侧 Source Control 面板中暂存你的改动
+2. 点击 commit message 输入框右侧的 **sparkle 图标**（Copilot 图标）
+3. Copilot 会根据暂存的 diff 自动生成 commit message
+4. 检查并修改生成的内容，确认无误后提交
+
+### GitHub Desktop（AI 生成）
+
+GitHub Desktop 同样支持 AI 辅助：
+
+1. 在左侧勾选要提交的文件
+2. 点击 Summary 输入框右侧的 **sparkle 图标**
+3. GitHub Desktop 会自动分析改动并生成 commit message
+4. 你可以在此基础上修改，然后点击 Commit
+
+### PR 描述也可以用 AI 生成
+
+在 GitHub 网页上创建 Pull Request 时，描述框同样提供了 Copilot 辅助：
+
+- 点击 PR 描述框中的 **Copilot 图标**
+- Copilot 会根据本次 PR 包含的所有 commit 自动生成描述
+- 生成的描述通常包含修改内容摘要和关键改动列表
+
+::: warning 注意
+AI 生成的内容只是起点，不要盲目接受。你应该：
+- 检查生成的 type 是否正确（是 `feat` 还是 `fix`？）
+- 确认描述是否准确反映了你的修改意图
+- 补充 AI 无法推断的上下文（比如"为什么"要做这个改动）
+:::
+
 ## 下一步
 
 commit 写好了，接下来看看如何规范地提交 [Pull Request](./pull-request)。

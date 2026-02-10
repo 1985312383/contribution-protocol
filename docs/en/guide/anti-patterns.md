@@ -75,7 +75,10 @@ Never syncing the latest code from upstream after forking leads to:
 - Eventually the PR may become unmergeable
 
 ::: danger Correct Approach
-Regularly run `git fetch upstream && git merge upstream/main` to stay in sync.
+Keep in sync with upstream regularly:
+- **CLI**: `git fetch upstream && git merge upstream/main`
+- **GitHub Web**: On your fork's page, click **Sync fork → Update branch**
+- **GitHub Desktop**: Switch to main branch, select Branch → Merge into current branch → upstream/main
 :::
 
 ## 6. Oversized PRs with Too Many Changes

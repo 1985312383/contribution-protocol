@@ -79,12 +79,22 @@ After submitting a PR, maintainers will conduct a Code Review. During this proce
 
 ### Updating Code Based on Review
 
-```bash
+::: code-group
+
+```bash [CLI]
 # Make changes on the same branch
 git add modified-file
 git commit -m "fix: address review feedback"
 git push origin feat/your-branch
 ```
+
+```txt [GitHub Desktop]
+1. After making changes, GitHub Desktop will show the modified files
+2. Check the files, enter a commit message
+3. Click Commit, then click Push origin
+```
+
+:::
 
 The PR will update automatically — no need to create a new one.
 

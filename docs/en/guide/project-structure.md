@@ -1,6 +1,19 @@
 # Anatomy of an Open-Source Project
 
-Before contributing, you need to understand what a standard open-source project looks like. This section walks you through the key areas using real GitHub projects as examples.
+Before contributing, you need to understand what a standard open-source project looks like.
+
+::: tip About the Example Project
+The screenshots and examples in this guide come from [torch-rechub](https://github.com/datawhalechina/torch-rechub), a community project the author helps maintain. It was chosen not to promote the project, but because:
+
+1. **Real and verifiable** — all screenshots and configs come from a live open-source repo that you can check on GitHub anytime, rather than fabricated diagrams
+2. **Fully configured** — after multiple iterations, this project has documentation, Issue templates, PR templates, CI/CD, Dependabot, Release Notes, PyPI publishing, and other collaboration configs, making it a good reference for "what a standard setup looks like"
+3. **Simple tech stack** — it's a Python-based scaffold tool with no complex frontend/backend architecture, so it won't add to the learning curve
+4. **The pitfalls are real** — many of the anti-patterns and common mistakes mentioned in this guide were actually encountered while maintaining this project
+
+You can apply these practices to any open-source project — they are not tied to any specific tech stack or community.
+:::
+
+This section walks you through the key areas using real GitHub projects as examples.
 
 ## Repository Homepage Overview
 

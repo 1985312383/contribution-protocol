@@ -75,7 +75,10 @@ Fork 之后从不同步上游的最新代码，导致：
 - 最终可能无法合并
 
 ::: danger 正确做法
-定期执行 `git fetch upstream && git merge upstream/main` 保持同步。
+定期同步上游代码保持一致：
+- **命令行**：`git fetch upstream && git merge upstream/main`
+- **GitHub 网页**：在 Fork 仓库页面点击 **Sync fork → Update branch**
+- **GitHub Desktop**：切换到 main 分支，选择 Branch → Merge into current branch → upstream/main
 :::
 
 ## 6. 一个 PR 包含过多修改

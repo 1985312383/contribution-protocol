@@ -51,15 +51,28 @@ Fork 完成后，你的 GitHub 账号下会出现一个同名仓库，格式为 
 
 ## 第二步：Clone 到本地
 
-```bash
+::: code-group
+
+```bash [命令行]
 # Clone 你 Fork 后的仓库（不是原始仓库）
 git clone https://github.com/你的用户名/项目名.git
 cd 项目名
 ```
 
+```txt [GitHub Desktop]
+1. 打开 GitHub Desktop
+2. 点击 File → Clone Repository
+3. 在列表中找到你 Fork 的仓库，或粘贴仓库 URL
+4. 选择本地存储路径，点击 Clone
+```
+
+:::
+
 ## 第三步：添加上游仓库
 
-```bash
+::: code-group
+
+```bash [命令行]
 # 添加原始仓库为 upstream
 git remote add upstream https://github.com/原始组织/项目名.git
 
@@ -71,9 +84,20 @@ git remote -v
 # upstream  https://github.com/原始组织/项目名.git (push)
 ```
 
+```txt [GitHub Desktop]
+GitHub Desktop 会自动识别 Fork 关系。
+Clone 完成后，你可以在菜单栏看到：
+  Branch → Merge into current branch → 选择 upstream/main
+GitHub Desktop 会自动将原始仓库设置为 upstream。
+```
+
+:::
+
 ## 第四步：创建功能分支
 
-```bash
+::: code-group
+
+```bash [命令行]
 # 确保你在 main 分支上，并同步上游最新代码
 git checkout main
 git fetch upstream
@@ -82,6 +106,15 @@ git merge upstream/main
 # 创建并切换到新的功能分支
 git checkout -b feat/add-search-feature
 ```
+
+```txt [GitHub Desktop]
+1. 确保当前分支是 main（左上角 Current Branch）
+2. 点击 Branch → New Branch
+3. 输入分支名，如 feat/add-search-feature
+4. 点击 Create Branch
+```
+
+:::
 
 ::: tip 分支命名建议
 使用有意义的前缀：
@@ -93,7 +126,9 @@ git checkout -b feat/add-search-feature
 
 ## 第五步：编写代码并提交
 
-```bash
+::: code-group
+
+```bash [命令行]
 # 编写代码后，查看修改
 git status
 git diff
@@ -106,6 +141,17 @@ git add docs/search.md
 git commit -m "feat: add search functionality"
 ```
 
+```txt [GitHub Desktop]
+1. 编写代码后，GitHub Desktop 左侧会自动显示所有改动文件
+2. 勾选你要提交的文件（不要全选无关文件）
+3. 点击某个文件可以查看具体的 diff
+4. 在左下角的 Summary 框中输入 commit message，如：
+   feat: add search functionality
+5. 点击 Commit to feat/add-search-feature
+```
+
+:::
+
 ::: warning 注意
 - 不要使用 `git add .` 或 `git add -A`，逐个添加你修改的文件
 - 每次提交只做一件事，不要把多个不相关的修改混在一起
@@ -114,9 +160,18 @@ git commit -m "feat: add search functionality"
 
 ## 第六步：Push 到你的仓库
 
-```bash
+::: code-group
+
+```bash [命令行]
 git push origin feat/add-search-feature
 ```
+
+```txt [GitHub Desktop]
+提交完成后，点击顶部的 Push origin 按钮即可。
+如果是新分支第一次推送，按钮会显示为 Publish branch。
+```
+
+:::
 
 ## 第七步：创建 Pull Request
 
@@ -130,12 +185,29 @@ Push 完成后，打开 GitHub，你会看到一个提示横幅，点击 **Compa
 
 在你开发的过程中，原始仓库可能已经有了新的提交。你需要定期同步：
 
-```bash
+::: code-group
+
+```bash [命令行]
 git checkout main
 git fetch upstream
 git merge upstream/main
 git push origin main
 ```
+
+```txt [GitHub 网页]
+1. 打开你 Fork 的仓库页面
+2. 如果落后于上游，页面会显示 "This branch is X commits behind"
+3. 点击 Sync fork → Update branch 即可一键同步
+```
+
+```txt [GitHub Desktop]
+1. 切换到 main 分支
+2. 点击菜单 Branch → Merge into current branch
+3. 选择 upstream/main
+4. 合并完成后点击 Push origin
+```
+
+:::
 
 如果你的功能分支也需要同步上游的最新改动：
 

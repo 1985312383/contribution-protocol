@@ -79,12 +79,22 @@ PR 提交后，维护者会进行 Code Review。这个过程中：
 
 ### 根据 Review 修改代码
 
-```bash
+::: code-group
+
+```bash [命令行]
 # 在同一个分支上修改代码
 git add 修改的文件
 git commit -m "fix: address review feedback"
 git push origin feat/your-branch
 ```
+
+```txt [GitHub Desktop]
+1. 修改代码后，GitHub Desktop 会自动显示改动
+2. 勾选修改的文件，输入 commit message
+3. 点击 Commit，然后点击 Push origin
+```
+
+:::
 
 PR 会自动更新，不需要重新创建。
 

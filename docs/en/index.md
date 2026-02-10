@@ -11,7 +11,7 @@ hero:
       link: /en/guide/why
     - theme: alt
       text: View on GitHub
-      link: https://github.com
+      link: https://github.com/1985312383/contribution-protocol
 
 features:
   - icon: 🔀
